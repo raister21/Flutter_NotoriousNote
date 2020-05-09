@@ -1,0 +1,28 @@
+Expanded(
+                              child: Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 18),
+                            color: Color.fromRGBO(47, 47, 47, 1),
+                            child: Row(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 7,
+                                  child: Text('Kill bill and make him feel',
+                                      style: TextStyle(
+                                          fontSize: 24,
+                                          color: Color.fromRGBO(
+                                              255, 255, 255, 1))),
+                                ),
+                                Expanded(
+                                    flex: 1,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        print('pressed');
+                                      },
+                                      icon: Icon(Icons.close),
+                                      color: Colors.redAccent[400],
+                                      iconSize: 28,
+                                    ))
+                              ],
+                            ),
+                          )

@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:xml/xml.dart' as xml;
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String notes = "assets/data/todos.xml";
 
   @override
   Widget build(BuildContext context) {
