@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './screens/questions.dart';
 import './screens/todos.dart';
+import './screens/answers.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   final tab = [
     ToDos(),
     Questions(),
-    Center(child:Text('ofdasla')),
+    Answers()
   ];
 
   int _currentIndex = 0;

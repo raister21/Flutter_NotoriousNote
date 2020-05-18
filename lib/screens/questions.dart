@@ -73,10 +73,10 @@ class _QuestionsState extends State<Questions> {
                                   child: Row(
                                     children: <Widget>[
                                       Expanded(
-                                          flex: 7,
+                                          flex: 10,
                                           child: Text('${question.quest}',
                                               style: TextStyle(
-                                                  fontSize: 24,
+                                                  fontSize: 20,
                                                   color: Color.fromRGBO(
                                                       255, 255, 255, 1)))),
                                       Expanded(
@@ -89,8 +89,26 @@ class _QuestionsState extends State<Questions> {
                                             },
                                             icon: Icon(Icons.close),
                                             color: Colors.redAccent[400],
-                                            iconSize: 28),
-                                      )
+                                            iconSize: 28
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: IconButton(
+                                          onPressed: () {
+
+                                          },
+                                          icon: Icon(Icons.check),
+                                          color: Colors.lightGreenAccent[400],
+                                          iconSize: 28,
+                                        )
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
                                     ],
                                   ),
                                 ))
@@ -113,24 +131,6 @@ class _QuestionsState extends State<Questions> {
             ),
           ),
         ),
-        // bottomNavigationBar: BottomNavigationBar(
-        //   selectedItemColor: Colors.amberAccent[200],
-        //   currentIndex: _currentIndex,
-        //   backgroundColor: Color.fromRGBO(47, 47, 47, 1),
-        //   items: [
-        //     BottomNavigationBarItem(
-        //         icon: Icon(Icons.event_available), title: Text('To do')),
-        //     BottomNavigationBarItem(
-        //         icon: Icon(Icons.library_books), title: Text('Questions')),
-        //     BottomNavigationBarItem(
-        //         icon: Icon(Icons.question_answer), title: Text('Answers'))
-        //   ],
-        //   onTap: (index) {
-        //     setState(() {
-        //       _currentIndex = index;
-        //     });
-        //   },
-        // ),
       ),
     );
   }

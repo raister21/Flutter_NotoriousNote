@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'note.dart';
+import '../readWrite/store.dart';
 
 class ToDos extends StatefulWidget {
+
+  final Store storage = Store();
+
   @override
   _ToDosState createState() => _ToDosState();
 }
 
 class _ToDosState extends State<ToDos> {
+
+  String readFile;
+
+  storage
+
   List<Note> notes = [
     Note('hello'),
     Note('Wolrd'),
@@ -76,7 +85,7 @@ class _ToDosState extends State<ToDos> {
                                       flex: 7,
                                       child: Text('${note.todo}',
                                           style: TextStyle(
-                                              fontSize: 24,
+                                              fontSize: 20,
                                               color: Color.fromRGBO(
                                                   255, 255, 255, 1)))),
                                   Expanded(
